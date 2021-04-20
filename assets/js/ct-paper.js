@@ -68,7 +68,7 @@ $(document).ready(function(){
     
 	// Carousel
 	$('.carousel').carousel({
-      interval: 4000
+      interval: false
     });
     
     $('.form-control').on("focus", function(){

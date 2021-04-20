@@ -2011,10 +2011,10 @@ textarea.form-control {
   background-image: none; }
 
 .carousel-inner {
-  background-color: #d6d2cc; }
+  background-color: transparent; }
 
 .carousel-inner > .item {
-  padding: 50px; }
+  padding: 0px; }
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -2023,15 +2023,36 @@ textarea.form-control {
   margin-left: 25%;
   max-width: 50%; }
 
+
 .carousel-indicators {
-  bottom: 0px; }
+  bottom: 0px; 
+position: absolute;
+    display: block;
+
+}
 
 .carousel-indicators > li {
-  background-color: #FFFFFF;
-  border: 0 none; }
+  background-color: transparent;
+  border: 2px solid #68B3C8;
+  border-radius: 20px;
+  color: #68B3C8;
+  height: 36px;
+  margin: 0 2px;
+  min-width: 36px;
+  padding: 5px 12px;}
 
 .carousel-indicators .active {
-  background-color: #8A704C; }
+  background-color: #68B3C8;
+  color: #FFFFFF;
+  border-radius: 20px;
+  color: #68B3C8;
+  height: 36px;
+  margin: 0 2px;
+  min-width: 36px;
+  padding: 5px 12px;
+
+}
+
 
 .modal-header {
   border-bottom: 1px solid #DDDDDD;
