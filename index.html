@@ -13,12 +13,62 @@
     <link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/ct-paper.css" rel="stylesheet"/>
     <link href="assets/css/demo.css" rel="stylesheet" />    
-    <link href="assets/css/ex.css" rel="stylesheet" />
+    <link href="assets/css/examples.css" rel="stylesheet" />
+    
+    
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>    
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:300,600' rel='stylesheet' type='text/css'>
+
+<style>
+        h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: "Oswald", sans-serif;
+}
+    
+    .register-card a{border-radius: 20px}
+    
+    .btn{border: 0;border-radius: 0;}
+    
+    .coll{cursor: pointer;}
+    .coll:hover .btn{background: #0d1236;}
+    
+    .tabb{position: absolute; bottom: 0; background: #151c55; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; width: 100%; height: 25%;text-align: center;}
+    
+    .tabb> h4{color: #fff;}
+    
+    .coll{margin: 5px;border-radius: 30px; position: relative; background: url(assets/paper_img/flume.jpg);background-size: cover; height: 400px;}
+    
+    
+  .barr {height: 63px;position: sticky; top: 0; left: 0; background: #151c55; z-index: 999;}
+    .barr> h4{margin: 21px 0; color: #fff; width: auto; display: inline-block}
+    .barr> a{border-radius: 50%;}
+        
+  .pagelabel {height: auto;position: fixed; top:  calc(100vh - 36px); right: 0; background: transparent; z-index: 999; margin: 0 }
+.toggle-up {
+  transform: rotate(180deg);
+}
+
+
+
+
+    .barr-button {margin:13px 0;float: right;}
+    .large {display: none;}
+     .small {display: block;text-align: left;}
+    .modal .section {padding: 0; height: 100vh}
+    
+    @media (min-width: 768px) {
+          .barr {height: 70px;position: sticky; top: 0; left: 0; background: #151c55; z-index: 999;}
+        .barr-button {margin:17px 0;float: right; content: "back"}
+        .barr> a{border-radius: 20px;}
+        .small {display: none;}
+         .large {display: block;}
+    }
+    </style>
+
 
 </head>
 <body>
@@ -26,7 +76,7 @@
   <div class="container" id="banner">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -34,10 +84,10 @@
       </button>
            <div class="logo-container">
                <div class="logo">
-<img src="assets/paper_img/new_logo.svg" height="70">
+<img src="assets/paper_img/new_logo.svg" id="logo1">
                </div>
                               <div class="brand">
-<img src="assets/paper_img/oblique.svg" height="70">
+<img src="assets/paper_img/oblique.svg" id="logo2">
                </div>
                
             </div>                    
@@ -46,7 +96,7 @@
     </div>
 
 <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navigation-example-2">
+    <div class="collapse navbar-collapse" id="navigation-example-1">
       <ul class="nav navbar-nav navbar-right">
           <li>
             <a href="documentation/tutorial-components.html" class="btn btn-danger btn-simple">Components</a>
@@ -86,25 +136,42 @@
                             <small>Pick the appropriate guide for the activity that you are embarking on </small>
                         </h3>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
+                    <div class="row" style="top: 0; left: 0;">
+                        <div class="col-md-12" style="max-height: 400px;">
 
 
-                        <div class="col-md-4 alert-info" style="height: 400px; text-align: center; border: 10px solid #f4f3ef; border-radius: 30px; position: relative">
-                            <h4>Community<br>Service</h4>
-                            <p>You are required to complete at least 80 hours of community service to fulfill 1 CU toward your undergraduate requirements</p>
-                            <a href="cs.html" class="btn btn-info" style="margin: auto; position: absolute; bottom: 15px; left: 10%; width: 80%">Start!</a></div>
+                        <div class="col-sm-4 col-md-4" style="height: 400px; padding: 0">
+                            <div class="coll" id="button1" data-toggle="modal" data-target="#myModal">
+                            <div class="tabb btn" id="box1" style="margin-bottom: 0; padding: 0;">
+                            <h4>Community&nbsp;Service</h4>
+
+                        </div>
+                            </div>
+                            
+                            </div>
                             
                             
-                         <div class="col-md-4 alert-success" style="height: 400px; text-align: center; border: 10px solid #f4f3ef; border-radius: 30px;">
+
+                        <div class="col-sm-4 col-md-4" style="height: 400px; padding: 0">
+                            <div class="coll" >
+                            <div class="tabb btn" data-toggle="modal" data-target="#myModal2" style="margin-bottom: 0; padding: 0;">
                             <h4>Internships</h4>
-                             <p>You are required to complete at least 10 weeks of internships to fulfill 1 CU toward your undergraduate requirements</p>
-                            <a href="int.html" class="btn btn-success" style="margin: auto; position: absolute; bottom: 15px; left: 10%; width: 80%">Start!</a></div>
+
+                        </div>
+                            </div>
                             
-                         <div class="col-md-4 alert-warning" style="height: 400px; text-align: center; border: 10px solid #f4f3ef; border-radius: 30px;">
-                            <h4>Co-curricular Activities</h4>
-                              <p>Activites that are non-credit bearing include clubs and societies that fall under reach respective schol/faculty or the Office of Student Life.</p>
-                            <a href="cca.html" class="btn btn-warning" style="margin: auto ;position: absolute; bottom: 15px; left: 10%; width: 80%">Start!</a></div>
+                            </div>
+
+
+                        <div class="col-sm-4 col-md-4" style="height: 400px; padding: 0">
+                            <div class="coll" >
+                            <div class="tabb btn" data-toggle="modal" data-target="#myModal3" style="margin-bottom: 0; padding: 0;">
+                            <h4>Co-curricular&nbsp;Activities</h4>
+
+                        </div>
+                            </div>
+                            
+                            </div>
 
                         </div>
                     </div>
@@ -405,7 +472,7 @@
                               <div class="container-fluid">
                                 <!-- Brand and toggle get grouped for better mobile display -->
                                 <div class="navbar-header">
-                                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
                                     <span class="sr-only">Toggle navigation</span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
@@ -420,7 +487,7 @@
                                     <li class="active"><a href="#">Link</a></li>
                                     <li><a href="#">Link</a></li>
                                     <li class="dropdown">
-                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret-u"></b></a>
 <!--                                  You can add classes for different colours on the next element -->
                                       <ul class="dropdown-menu dropdown-menu-right">
                                         <li class="dropdown-header">Dropdown header</li>
@@ -467,84 +534,9 @@
                                   <ul class="nav navbar-nav pull-right">
 <!--                                       default dropdown -->
                                     <li class="dropdown">
-                                      <buttonn href="#" class="dropdown-toggle btn" data-toggle="dropdown">Default <b class="caret"></b></button>
+                                      <button href="#" class="dropdown-toggle btn" data-toggle="dropdown">Default <b class="caret"></b></button>
 <!--                                  You can add classes for different colours on the next element -->
                                       <ul class="dropdown-menu dropdown-menu-right">
-                                        <li class="dropdown-header">Dropdown header</li>
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                      </ul>
-                                    </li>
-<!--                                       primary dropdown -->
-                                    <li class="dropdown">
-                                      <button href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown">Primary <b class="caret"></b></button>
-<!--                                  You can add classes for different colours on the next element -->
-                                      <ul class="dropdown-menu dropdown-primary dropdown-menu-right">
-                                        <li class="dropdown-header">Dropdown header</li>
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                      </ul>
-                                    </li>
-<!--                                       info dropdown -->
-                                    <li class="dropdown">
-                                      <button href="#" class="dropdown-toggle btn btn-info" data-toggle="dropdown">Info <b class="caret"></b></button>
-<!--                                  You can add classes for different colours on the next element -->
-                                      <ul class="dropdown-menu dropdown-info dropdown-menu-right">
-                                        <li class="dropdown-header">Dropdown header</li>
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                      </ul>
-                                    </li>
-<!--                                       success dropdown -->
-                                    <li class="dropdown">
-                                      <button href="#" class="dropdown-toggle btn btn-success" data-toggle="dropdown">Success <b class="caret"></b></button>
-<!--                                  You can add classes for different colours on the next element -->
-                                      <ul class="dropdown-menu dropdown-success dropdown-menu-right">
-                                        <li class="dropdown-header">Dropdown header</li>
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                      </ul>
-                                    </li>
-<!--                                       warning dropdown -->
-                                    <li class="dropdown">
-                                      <button href="#" class="dropdown-toggle btn btn-warning" data-toggle="dropdown">Warning <b class="caret"></b></button>
-<!--                                  You can add classes for different colours on the next element -->
-                                      <ul class="dropdown-menu dropdown-warning dropdown-menu-right">
-                                        <li class="dropdown-header">Dropdown header</li>
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                      </ul>
-                                    </li>
-<!--                                       danger dropdown -->
-                                    <li class="dropdown">
-                                      <button href="#" class="dropdown-toggle btn btn-danger" data-toggle="dropdown">Danger <b class="caret"></b></button>
-<!--                                  You can add classes for different colours on the next element -->
-                                      <ul class="dropdown-menu dropdown-danger dropdown-menu-right">
                                         <li class="dropdown-header">Dropdown header</li>
                                         <li><a href="#">Action</a></li>
                                         <li><a href="#">Another action</a></li>
@@ -572,323 +564,8 @@
             </div>
     </div>
 </div>
-    <div id="navbar-full">
-        <div id="navbar">
-            <div class="navigation-example">
-<!--                 transparent navbar -->
-                <nav class="navbar navbar-ct-transparent" role="navigation-demo">
-                  <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Transparent</a>
-                    </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navigation-example-2">
-                      <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook-square"></i>
-                                    Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                    Twitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-envelope"></i>
-                                    Email
-                                </a>
-                            </li>
-                       </ul>
-                    </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-->
-                </nav>
-
-<!--                  default navbar -->
-                <nav class="navbar navbar-default" role="navigation-demo">
-                  <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Default</a>
-                    </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navigation-example-2">
-                      <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#" class="btn btn-simple">Link</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" class="btn btn-fill">Button</a>
-                        </li>
-                      </ul>
-                      <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook-square"></i>
-                                    Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                    Twitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-envelope"></i>
-                                    Email
-                                </a>
-                            </li>
-                       </ul>
-                    </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-->
-                </nav>
-
-<!--                  primary navbar -->
-                <nav class="navbar navbar-ct-primary" role="navigation-demo">
-                  <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Primary</a>
-                    </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navigation-example-2">
-                    <ul class="nav navbar-nav">
-                        <a href="#" class="btn btn-primary btn-simple">Link</a>
-                        <a href="#" target="_blank" class="btn btn-primary btn-fill">Button</a>
-
-                    </ul>
-                      <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook-square"></i>
-                                    Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                    Twitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-envelope"></i>
-                                    Email
-                                </a>
-                            </li>
-                       </ul>
-                    </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-->
-                </nav>
-
-<!--                     info navbar -->
-                <nav class="navbar navbar-ct-info" role="navigation-demo">
-                  <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Info</a>
-                    </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navigation-example-2">
-                    <ul class="nav navbar-nav">
-                        <a href="#" class="btn btn-info btn-simple">Link</a>
-                        <a href="#" target="_blank" class="btn btn-info btn-fill">Button</a>
-                      </ul>
-                      <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook-square"></i>
-                                    Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                    Twitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-envelope"></i>
-                                    Email
-                                </a>
-                            </li>
-                       </ul>
-                    </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-->
-                </nav>
-
-<!--                     success navbar -->
-                <nav class="navbar navbar-ct-success" role="navigation-demo">
-                  <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Success</a>
-                    </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navigation-example-2">
-                    <ul class="nav navbar-nav">
-                        <a href="#" class="btn btn-success btn-simple">Link</a>
-                        <a href="#" target="_blank" class="btn btn-success btn-fill">Button</a>
-                      </ul>
-                      <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook-square"></i>
-                                    Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                    Twitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-envelope"></i>
-                                    Email
-                                </a>
-                            </li>
-                       </ul>
-                    </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-->
-                </nav>
-
-<!--                     warning navbar -->
-                <nav class="navbar navbar-ct-warning" role="navigation-demo">
-                  <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Warning</a>
-                    </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navigation-example-2">
-                    <ul class="nav navbar-nav">
-                        <a href="#" class="btn btn-warning btn-simple">Link</a>
-                        <a href="#" target="_blank" class="btn btn-warning btn-fill">Button</a>
-                      </ul>
-                      <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook-square"></i>
-                                    Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                    Twitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-envelope"></i>
-                                    Email
-                                </a>
-                            </li>
-                       </ul>
-                    </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-->
-                </nav>
-
-<!--                     danger navbar -->
-                <nav class="navbar navbar-ct-danger" role="navigation-demo">
-                  <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Danger</a>
-                    </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navigation-example-2">
-                    <ul class="nav navbar-nav">
-                        <a href="#" class="btn btn-danger btn-simple">Link</a>
-                        <a href="#" target="_blank" class="btn btn-danger btn-fill">Button</a>
-                      </ul>
-                      <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook-square"></i>
-                                    Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                    Twitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-envelope"></i>
-                                    Email
-                                </a>
-                            </li>
-                       </ul>
-                    </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-->
-                </nav>
-
-
-
-            </div><!--  navigation example -->
-        </div> <!-- end #navbar -->
-    </div> <!-- end navbar-full -->
+    
 <div class="wrapper">
     <div class="main">
         <div class="section section-nude">
@@ -1175,9 +852,7 @@
                         </div>
 
                         <!-- Button trigger modal, modals must be placed outside the global wrapper -->
-                        <button class="btn btn-neutral" data-toggle="modal" data-target="#myModal">
-                          Launch demo modal
-                        </button>
+
                     </div>
                     <div class="col-md-6">
                         <div class="tim-title">
@@ -1223,42 +898,6 @@
             </div>
         </div>
     </div> <!-- end main -->
-
-    <div id="carousel">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"  data-interval="false">
-        <div class="carousel slide" data-ride="carousel">
-
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              </ol>
-
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                <div class="item active">
-                  <img src="assets/paper_img/pencils.jpg" alt="Awesome Image">
-                </div>
-                <div class="item">
-                  <img src="assets/paper_img/shoes.jpg" alt="Awesome Image">
-                </div>
-                <div class="item">
-                  <img src="assets/paper_img/types.jpg" alt="Awesome Image">
-                </div>
-              </div>
-
-              <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                <span class="fa fa-angle-left"></span>
-              </a>
-              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                <span class="fa fa-angle-right"></span>
-              </a>
-        </div>
-    </div> <!-- end carousel -->
-
-</div> <!-- end wrapper -->
 
     <!-- </div> -->
     <div class="main">
@@ -1346,29 +985,104 @@
     </div>
 </footer>
 </div>
+
+    
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. </p>
-      </div>
-      <div class="modal-footer">
-        <div class="left-side">
-            <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Never mind</button>
-        </div>
-        <div class="divider"></div>
-        <div class="right-side">
-            <button type="button" class="btn btn-danger btn-simple">Delete</button>
-        </div>
-      </div>
+<div class="modal fade" style="background: #151c55" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+
+    <div class="barr" style="width: 100%">
+ <div class="container tim-container barr">
+<h4 style="margin: 21px 0; color: #fff; width: auto; display: inline-block">Community Service</h4>
+     <a data-dismiss="modal" target="#myModal" href="#" class="btn btn-danger btn-fill barr-button large">back</a>
+     <a data-dismiss="modal" target="#myModal" href="#" class="btn btn-danger btn-fill barr-button small" style="padding: 7px 14px;">&lt;</a>
+     
+    </div> 
+        
+        
     </div>
-  </div>
+    
+
+
+    
+     <a href="#" class="btn btn-danger btn-fill barr-button small" style="padding: 7px 14px;">?</a>
+
+<div class="wrapper">
+
+        <div class="section" style="padding: 0">
+         <div class="container">
+
+                            
+                        <h3>
+                            <small>It is recommended that you keep this guide open, and complete the necessary tasks on a different tab or window.</small>
+                        </h3>
+                       
+<div class="register-card"><label>Step 1</label>
+    <ul>
+    <li>Log in to eLearn</li> 
+    <li>Complete the <b>Reflective Practice Unit</b> by scoring at least 80% for the quiz.</li>
+             
+             
+     </ul> 
+    
+    <a href="https://elearn.smu.edu.sg/d2l/loginh/" target="_blank"
+ class="btn btn-fill btn-block">log in to eLearn</a>
+    
+    <div target="_blank"
+ class="btn btn-fill btn-block input" style="border-radius: 20px;">I've done this</div>
+             </div>
+                
+
+            </div>
+         </div>        
+    
+    <div class="section" style="padding: 0" id="step2">
+         <div class="container">
+
+                            
+                        <h3>
+                            <small>It is recommended that you keep this guide open, and complete the necessary tasks on a different tab or window.</small>
+                        </h3>
+                       
+<div class="register-card">Step 2</div>
+                
+
+            </div>
+         </div>
+         
+    <div class="section" style="padding: 0">
+         <div class="container">
+
+                            
+                        <h3>
+                            <small>It is recommended that you keep this guide open, and complete the necessary tasks on a different tab or window.</small>
+                        </h3>
+                       
+<div class="register-card">Step 3</div>
+                
+
+            </div>
+         </div>
+     
+    </div>
+    
+    
+    
+    
+    <div class="pagelabel">
+    
+       
+    <a class="btn btn-danger btn-fill large ">Steps&nbsp;<b id="karat" class="caret"></b></a>
+    <a class="btn btn-danger btn-fill large">Step 1</a>
+    <a class="btn btn-danger btn-fill large">Step 2</a>
+     
+    
+    
+    </div>
+
+
 </div>
+
 
 <!--    end modal -->
 
@@ -1387,4 +1101,31 @@
 	<script src="assets/js/bootstrap-datepicker.js"></script>
 
 	<script src="assets/js/ct-paper.js"></script>
+    
+    <script>document.getElementById('myModal')
+        .addEventListener('scroll', function(event) {
+    console.log("Scrolling");
+});
+        
+        
+$(".input").click(function() {
+    const element = document.getElementById('step2')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+        jQuery.fn.clickToggle = function(a, b) {
+  return this.on("click", function(ev) { [b, a][this.$_io ^= 1].call(this, ev) })
+};
+        
+$('.pagelabel').clickToggle(function(ev) {
+$('.pagelabel').animate({top: '-=72px'});
+$('#karat').toggleClass("toggle-up");
+
+}, function(ev) {
+$('.pagelabel').animate({top: '+=72px'});
+$('#karat').toggleClass("toggle-up");
+});
+
+        
+    </script>
+    
 </html>
