@@ -1004,12 +1004,9 @@
     
 
 
-    
-     <a href="#" class="btn btn-danger btn-fill barr-button small" style="padding: 7px 14px;">?</a>
-
 <div class="wrapper">
 
-        <div class="section" style="padding: 0">
+        <div class="section" style="padding: 0" id="step1">
          <div class="container">
 
                             
@@ -1072,13 +1069,23 @@
     <div class="pagelabel">
     
        
-    <a class="btn btn-danger btn-fill large ">Steps&nbsp;<b id="karat" class="caret"></b></a>
-    <a class="btn btn-danger btn-fill large">Step 1</a>
-    <a class="btn btn-danger btn-fill large">Step 2</a>
+    <a class="btn btn-danger btn-fill large stepbtn">Steps&nbsp;<b id="karat" class="caret"></b></a>
+        
+    <a class="btn btn-danger btn-fill large" id="step1btn">Step 1</a>
+    <a class="btn btn-danger btn-fill large" id="step2btn">Step 2</a>
      
     
+     <a class="btn btn-danger btn-fill small stepbtns" style="padding: 7px 14px; margin: 0;" id="#stepbtns">?</a>
+
+         <a class="btn btn-danger btn-fill small" style="padding: 7px 14px; margin: 0;" id="step1btns">1</a>
+
+         <a class="btn btn-danger btn-fill small" style="padding: 7px 14px; margin: 0;" id="step2btns">2</a>
+
     
     </div>
+    
+    
+    
 
 
 </div>
@@ -1111,12 +1118,30 @@
 $(".input").click(function() {
     const element = document.getElementById('step2')
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
+$("#step1btn").click(function() {
+    const element = document.getElementById('step1')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
+$("#step2btn").click(function() {
+    const element = document.getElementById('step2')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
+$("#step1btns").click(function() {
+    const element = document.getElementById('step1')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});    
+$("#step2btns").click(function() {
+    const element = document.getElementById('step2')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+        
+        
         jQuery.fn.clickToggle = function(a, b) {
   return this.on("click", function(ev) { [b, a][this.$_io ^= 1].call(this, ev) })
 };
         
-$('.pagelabel').clickToggle(function(ev) {
+$('.stepbtn, .stepbtns').clickToggle(function(ev) {
 $('.pagelabel').animate({top: '-=72px'});
 $('#karat').toggleClass("toggle-up");
 
@@ -1124,6 +1149,7 @@ $('#karat').toggleClass("toggle-up");
 $('.pagelabel').animate({top: '+=72px'});
 $('#karat').toggleClass("toggle-up");
 });
+
 
         
     </script>
