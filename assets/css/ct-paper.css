@@ -2166,7 +2166,10 @@ height: 90%;
 
   body {
     position: relative;
-    font-size: 12px; }
+    font-size: 12px; }  
+    
+    a.btn, .input {
+    font-size: 12px; font-weight: bold; }
 
   h6 {
     font-size: 1em; }
@@ -2753,3 +2756,12 @@ height: 90%;
 .datepicker-months thead {
   padding: 0 0 3px;
   display: block; }
+
+.register-card {
+  background-color: #FF8F5E;
+  border-radius: 8px;
+  color: #fff;
+  max-width: 350px;
+  margin: 20px 0 70px;
+  min-height: auto;
+  padding: 30px; }
