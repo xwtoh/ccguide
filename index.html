@@ -28,7 +28,33 @@
         h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: "Oswald", sans-serif;
 }
-    
+.round-time-bar {
+  margin: 15px 0 0 0;
+  overflow: hidden;
+}
+.round-time-bar div {
+  height: 5px;
+  animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
+    forwards;
+  transform-origin: left center;
+  background: #151c55;
+}
+
+.round-time-bar[data-style="smooth"] div {
+  animation: roundtime calc(var(--duration) * 1s) linear forwards;
+}
+
+.round-time-bar[data-style="fixed"] div {
+  width: calc(var(--duration) * 5%);
+}
+
+
+@keyframes roundtime {
+  to {
+    /* More performant than `width` */
+    transform: scaleX(0);
+  }
+}
     .register-card a{border-radius: 20px}
     
     .btn{border: 0;border-radius: 0;}
@@ -57,8 +83,10 @@
     .modal .section {height: 100vh}
     
     
-    .notif{position: fixed; bottom: 0; left: calc(-100%); width: calc(100% - 45px); z-index: 1000; font-size: 12px; color: #fff;
-    }
+    .notif{position: fixed; bottom: 0; left: calc(-100%); width: calc(100% - 45px); z-index: 1000;
+    }    
+    
+    .notif p{font-size: 12px; color: #fff; padding: 15px 15px 0 15px;}
     
     @media (min-width: 768px) {
           .barr {height: 70px;position: fixed; top: 0; left: 0; background: #151c55; z-index: 999;}
@@ -66,8 +94,9 @@
         .barr> a{border-radius: 20px;}
         .small {display: none;}
          .large {display: block;}
-         .notif{position: fixed; bottom: 0; left: calc(-100%); width: 50% ; z-index: 1000; font-size: 16px}
-    }
+        .notif{position: fixed; bottom: 0; left: calc(-100%); width: 50% ; z-index: 1000;}
+        .notif p {font-size: 16px; padding: 15px 15px 0 15px;}}
+    
     </style>
 
 
@@ -977,11 +1006,13 @@
     </div>
     
 
-    <div class="alert alert-danger notif">
+    <div class="alert alert-danger notif" style="padding: 0">
    
-                 Make sure you score <b>at least 80% for each quiz</b>.
-                 You may check your scores in the <b>Class Progress</b> tab in eLearn.
-  
+                 <p>Make sure you score <b>at least 80% for each quiz</b>.
+                     You may check your scores in the <b>Class Progress</b> tab in eLearn.</p>
+<div class="round-time-bar" data-style="smooth" style="--duration: 5;">
+  <div></div>
+</div>
         </div>
 
 <div class="wrapper">
@@ -1094,9 +1125,16 @@
         
         
 $("#input1").click(function() {
-    const element = document.getElementById('step2')
+    const element = document.getElementById('step2');
+    
+const bars = document.querySelectorAll(".round-time-bar");
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
    $('.notif').animate({'left' : '0'});   
+  bars.forEach((bar) => {
+    bar.classList.remove("round-time-bar");
+    bar.offsetWidth;
+    bar.classList.add("round-time-bar");
+  });
     $('.notif').delay(5000).animate({'left' : '-100%'});
 
 });        
@@ -1130,6 +1168,16 @@ $('#karat').toggleClass("toggle-up");
 $('.pagelabel').animate({top: '+=72px'});
 $('#karat').toggleClass("toggle-up");
 });
+
+        function progress(timeleft, timetotal, $element) {
+    var progressBarWidth = timeleft * $element.width() / timetotal;
+    $element.find('div').animate({ width: progressBarWidth }, 500).html(timeleft + " seconds to go");
+    if(timeleft > 0) {
+        setTimeout(function() {
+            progress(timeleft - 1, timetotal, $element);
+        }, 1000);
+    }
+};
 
 
         
