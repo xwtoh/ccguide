@@ -1166,7 +1166,7 @@ $("#input1").click(function() {
     
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 const bars = document.querySelectorAll(".round-time-bar");
-   $('.notif').animate({'left' : '0'});   
+   $('.notif').animate({'left' : '+=100%'});   
   bars.forEach((bar) => {
     bar.classList.remove("round-time-bar");
     bar.offsetWidth;
