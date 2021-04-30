@@ -80,7 +80,7 @@
     .barr-button {margin:13px 0;float: right;}
     .large {display: none;}
      .small {display: block;text-align: left;}
-    .modal .section {height: 100vh}
+    .modal .section {min-height: 100vh}
     
     
     .notif{position: fixed; bottom: 0; left: calc(-100%); width: calc(100% - 45px); z-index: 1000;
@@ -1044,21 +1044,34 @@
                 
 
             </div>
-         </div>        
-    
-    <div class="section" style="padding: 70px 0 0 0" id="step2">
+         </div>    
+        <div class="section" style="padding: 70px 0 0 0" id="step2">
          <div class="container">
 
-                            
-                        <h3>
-                            <small>It is recommended that you keep this guide open, and complete the necessary tasks on a different tab or window.</small>
-                        </h3>
-                       
-<div class="register-card">Step 2</div>
+<div class="register-card"><label>Step 2</label>
+    <ul>
+    <li>Source for a suitable Community Service Project(CSP), preferably one that allows you to fulfil all your hours; this will give you an opportunity to learn more about the case and beneficiaries you are serving.</li> 
+<br>
+    <li>Do note that prior approval must be obtained via OnTrac II before starting on your CSP. Otherwise, the community service hours will not be recognised.</li>
+<br>
+<li>Log on to OnTrac II to apply or propose a CSP, and wait for an approval from C4SR</li><br>
+        
+<li><b>Note: you will only be able to access OnTrac II after your RPU &amp; CSU completion status has been updated. This is updated 6 times a day.</b></li><br>
+
+     </ul> 
+    
+    <ul style="background: black; text-align: center; padding: 0">Next update is at <span id="time"></span></ul>
+    
+    <a href="https://c4sr-smusg-csm.symplicity.com/students/index.php" target="_blank"
+ class="btn btn-fill btn-block" style="margin: 30px 0 10px 0">log in to OnTrac II</a>
+    
+    <div target="_blank"
+ class="btn btn-fill btn-block input" id="input12" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
+             </div>
                 
 
             </div>
-         </div>
+         </div>        
          
     <div class="section" style="padding: 0">
          <div class="container">
@@ -1179,8 +1192,84 @@ $('#karat').toggleClass("toggle-up");
     }
 };
 
-
         
+switch (new Date().getHours()) {
+  case 0:
+    $('#time').html('4am');
+    break;
+  case 1:
+    $('#time').html('4am');
+    break;
+  case 2:
+    $('#time').html('4am');
+    break;
+  case 3:
+    $('#time').html('4am');
+    break;
+  case 4:
+    $('#time').html('8am');
+    break;
+  case 5:
+    $('#time').html('8am');
+    break;
+case 6:
+    $('#time').html('8am');
+    break;
+  case 7:
+    $('#time').html('8am');
+    break;
+  case 8:
+    $('#time').html('12pm');
+    break;
+  case 9:
+    $('#time').html('12pm');
+    break;
+  case 10:
+    $('#time').html('12pm');
+    break;
+  case 11:
+    $('#time').html('12pm');
+    break;  
+    
+case 12:
+    $('#time').html('4pm');
+    break;
+  case 13:
+    $('#time').html('4pm');
+    break;
+  case 14:
+    $('#time').html('4pm');
+    break;
+  case 15:
+    $('#time').html('4pm');
+    break;
+  case 16:
+    $('#time').html('8pm');
+    break;
+  case 17:
+    $('#time').html('8pm');
+    break;
+case 18:
+    $('#time').html('8pm');
+    break;
+  case 19:
+    $('#time').html('8pm');
+    break;
+  case 20:
+    $('#time').html('12am');
+    break;
+  case 21:
+    $('#time').html('12am');
+    break;
+  case 22:
+    $('#time').html('12am');
+    break;
+  case 23:
+    $('#time').html('12am');
+}        
+        
+        
+
     </script>
     
 </html>
