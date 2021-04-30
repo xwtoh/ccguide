@@ -44,6 +44,8 @@
 .round-time-bar div.clicked {
 width: 0;
 }
+    
+
 
     .register-card a{border-radius: 20px}
     
@@ -63,12 +65,14 @@ width: 0;
     .barr> h4{margin: 21px 0; color: #fff; width: auto; display: inline-block}
     .barr> a{border-radius: 50%;}
         
-  .pagelabel {height: auto;position: fixed; top:  calc(100vh - 51px); right: 46px; background: transparent; z-index: 999; margin: 0 }
+  .pagelabel {height: auto;position: fixed; bottom: -72px; right: 46px; background: transparent; z-index: 999; margin: 0 }
+
+
 .toggle-up {
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
     .barr-button {margin:13px 0;float: right;}
-    .large {display: block;}
+    .large {display: none;}
      .small {display: block;text-align: left;}
     .modal .section {min-height: 100vh}
     
@@ -1103,16 +1107,17 @@ width: 0;
     <div class="pagelabel">
     
        
-    <a class="btn btn-danger btn-fill large stepbtn">Steps&nbsp;<b id="karat" class="caret"></b></a>
+    <a class="btn btn-danger btn-fill large stepbtn"><b id="karat" class="caret"></b>&nbsp;Steps</a>
         
     <a class="btn btn-danger btn-fill large" id="step1btn">Step 1</a>
     <a class="btn btn-danger btn-fill large" id="step2btn">Step 2</a>
-        <a class="btn btn-danger btn-fill large" id="step3btn">Step 3</a>
-    <a class="btn btn-danger btn-fill large" id="step2btn">Step 4</a>
-        <a class="btn btn-danger btn-fill large" id="step4btn">Step 5</a>
-    <a class="btn btn-danger btn-fill large" id="step5btn">Step 6</a>
-     
+    
+    
+     <a class="btn btn-danger btn-fill small stepbtns" style="padding: 7px 14px; margin: 0;" id="#stepbtns">?</a>
 
+         <a class="btn btn-danger btn-fill small" style="padding: 7px 14px; margin: 0;" id="step1btns">1</a>
+
+         <a class="btn btn-danger btn-fill small" style="padding: 7px 14px; margin: 0;" id="step2btns">2</a>
 
     
     </div>
@@ -1193,11 +1198,11 @@ element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
         
 $('.stepbtn, .stepbtns').clickToggle(function(ev) {
-$('.pagelabel').animate({right: '-=0'});
+$('.pagelabel').animate({bottom: '+=72px'});
 $('#karat').toggleClass("toggle-up");
 
 }, function(ev) {
-$('.pagelabel').animate({right: '+=0'});
+$('.pagelabel').animate({bottom: '-=72px'});
 $('#karat').toggleClass("toggle-up");
 });
 
