@@ -1044,44 +1044,66 @@
                 
 
             </div>
-         </div>    
+         </div>  
+    
+    
         <div class="section" style="padding: 70px 0 0 0" id="step2">
          <div class="container">
 
-<div class="register-card"><label>Step 2</label>
-    <ul>
+<div class="register-card" style="position: relative">
+        <ul style="background: black; text-align: center; padding: 5px; position: absolute; right: 0; top: 0; border-top-right-radius: 8px;">Next update is at <span id="time"></span></ul>
+    
+    <label>Step 2</label>
+    <ul style="position: relative">
     <li>Source for a suitable Community Service Project(CSP), preferably one that allows you to fulfil all your hours; this will give you an opportunity to learn more about the case and beneficiaries you are serving.</li> 
-<br>
     <li>Do note that prior approval must be obtained via OnTrac II before starting on your CSP. Otherwise, the community service hours will not be recognised.</li>
-<br>
-<li>Log on to OnTrac II to apply or propose a CSP, and wait for an approval from C4SR</li><br>
-        
+<li>Log on to OnTrac II to apply or propose a CSP, and wait for an approval from C4SR</li>
 <li><b>Note: you will only be able to access OnTrac II after your RPU &amp; CSU completion status has been updated. This is updated 6 times a day.</b></li><br>
 
+
+    
      </ul> 
-    
-    <ul style="background: black; text-align: center; padding: 0">Next update is at <span id="time"></span></ul>
-    
-    <a href="https://c4sr-smusg-csm.symplicity.com/students/index.php" target="_blank"
- class="btn btn-fill btn-block" style="margin: 30px 0 10px 0">log in to OnTrac II</a>
+
+    <a href="https://www.smu.edu.sg/ontrac" target="_blank"
+ class="btn btn-fill btn-block" style="margin: 0 10px">log in to OnTrac II</a>
     
     <div target="_blank"
- class="btn btn-fill btn-block input" id="input12" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
+ class="btn btn-fill btn-block input" id="input2" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
                 
 
             </div>
          </div>        
-         
-    <div class="section" style="padding: 0">
+             
+        <div class="section" style="padding: 70px 0 0 0" id="step3">
          <div class="container">
 
-                       
-<div class="register-card">Step 3</div>
+<div class="register-card" style="position: relative">
+        <ul style="background: black; text-align: center; padding: 5px; position: absolute; right: 0; top: 0; border-top-right-radius: 8px;">Next update is at <span id="time"></span></ul>
+    
+    <label>Step 3</label>
+    <ul style="position: relative">
+    <li>Source for a suitable Community Service Project(CSP), preferably one that allows you to fulfil all your hours; this will give you an opportunity to learn more about the case and beneficiaries you are serving.</li> 
+    <li>Do note that prior approval must be obtained via OnTrac II before starting on your CSP. Otherwise, the community service hours will not be recognised.</li>
+<li>Log on to OnTrac II to apply or propose a CSP, and wait for an approval from C4SR</li>
+        <li><b>Note:</b> You will only be able to access OnTrac II after your RPU &amp; CSU completion status has been updated. This is updated 6 times a day.</li>li><br>
+
+
+    
+     </ul> 
+    
+    <a href="https://c4sr-smusg-csm.symplicity.com/students/index.php" target="_blank"
+ class="btn btn-fill btn-block" style="margin: 30px 0 10px 0">log in to OnTrac II</a>
+    
+    <div target="_blank"
+ class="btn btn-fill btn-block input" id="input2" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
+             </div>
                 
 
             </div>
-         </div>
+         </div>        
+
+    
      
     </div>
     
@@ -1140,8 +1162,8 @@
 $("#input1").click(function() {
     const element = document.getElementById('step2');
     
-const bars = document.querySelectorAll(".round-time-bar");
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+const bars = document.querySelectorAll(".round-time-bar");
    $('.notif').animate({'left' : '0'});   
   bars.forEach((bar) => {
     bar.classList.remove("round-time-bar");
@@ -1151,6 +1173,12 @@ element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     $('.notif').delay(5000).animate({'left' : '-100%'});
 
 });        
+        
+        $("#input2").click(function() {
+    const element = document.getElementById('step3');
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });       
+        
 $("#step1btn").click(function() {
     const element = document.getElementById('step1')
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1235,7 +1263,7 @@ case 12:
     $('#time').html('4pm');
     break;
   case 13:
-    $('#time').html('4pm');
+    $('#time').html('4pm');  
     break;
   case 14:
     $('#time').html('4pm');
@@ -1267,7 +1295,6 @@ case 18:
   case 23:
     $('#time').html('12am');
 }        
-        
         
 
     </script>
