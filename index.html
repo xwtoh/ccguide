@@ -25,7 +25,6 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald:300,600' rel='stylesheet' type='text/css'>
     
 
-
 <style>
         h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: "Oswald", sans-serif;
@@ -1166,36 +1165,36 @@ $("#input1").click(function() {
     
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 const bars = document.querySelectorAll(".round-time-bar");
-   $('.notif').animate({'left' : '+=100%'});   
+   $('.notif').animate({'left' : '0'});   
   bars.forEach((bar) => {
     bar.classList.remove("round-time-bar");
     bar.offsetWidth;
     bar.classList.add("round-time-bar");
   });
-    $('.notif').delay(5000).animate({'left' : '-=100%'});
+    $('.notif').delay(5000).animate({'left' : '-100%'});
 
 });        
         
         $("#input2").click(function() {
     const element = document.getElementById('step3');
-element.scrollIntoView(true);
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });       
         
 $("#step1btn").click(function() {
     const element = document.getElementById('step1')
-element.scrollIntoView(true);
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });        
 $("#step2btn").click(function() {
     const element = document.getElementById('step2')
-element.scrollIntoView(true);
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });        
 $("#step1btns").click(function() {
     const element = document.getElementById('step1')
-element.scrollIntoView(true);
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });    
 $("#step2btns").click(function() {
     const element = document.getElementById('step2')
-element.scrollIntoView(true);
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
         
         
@@ -1214,7 +1213,7 @@ $('#karat').toggleClass("toggle-up");
 
         function progress(timeleft, timetotal, $element) {
     var progressBarWidth = timeleft * $element.width() / timetotal;
-    $element.find('div').animate(true);
+    $element.find('div').animate({ width: progressBarWidth }, 500).html(timeleft + " seconds to go");
     if(timeleft > 0) {
         setTimeout(function() {
             progress(timeleft - 1, timetotal, $element);
