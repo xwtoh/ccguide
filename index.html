@@ -35,27 +35,16 @@
 }
 .round-time-bar div {
   height: 5px;
-  animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
-    forwards;
+  transition: width 5s linear;
   transform-origin: left center;
   background: #151c55;
+    width: 100%;
+}
+    
+.round-time-bar div.clicked {
+width: 0;
 }
 
-.round-time-bar[data-style="smooth"] div {
-  animation: roundtime calc(var(--duration) * 1s) linear forwards;
-}
-
-.round-time-bar[data-style="fixed"] div {
-  width: calc(var(--duration) * 5%);
-}
-
-
-@keyframes roundtime {
-  to {
-    /* More performant than `width` */
-    transform: scaleX(0);
-  }
-}
     .register-card a{border-radius: 20px}
     
     .btn{border: 0;border-radius: 0;}
@@ -1011,7 +1000,7 @@
    
                  <p>Make sure you score <b>at least 80% for each quiz</b>.
                      You may check your scores in the <b>Class Progress</b> tab in eLearn.</p>
-<div class="round-time-bar" data-style="smooth" style="--duration: 5;">
+<div class="round-time-bar">
   <div></div>
 </div>
         </div>
@@ -1164,13 +1153,11 @@ $("#input1").click(function() {
     const element = document.getElementById('step2');
     
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-const bars = document.querySelectorAll(".round-time-bar");
-   $('.notif').animate({'left' : '0'});   
-  bars.forEach((bar) => {
-    bar.classList.remove("round-time-bar");
-    bar.offsetWidth;
-    bar.classList.add("round-time-bar");
-  });
+
+   $('.notif').animate({'left' : '0'});       
+    $('.round-time-bar div').toggleClass('clicked');
+
+    
     $('.notif').delay(5000).animate({'left' : '-100%'});
 
 });        
