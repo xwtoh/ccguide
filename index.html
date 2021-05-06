@@ -47,10 +47,9 @@
 transform: scaleX(0);
 }
     
-    .register-card2 img {max-height: 50vh; max-width: 50vh;}
-
-
     .register-card a{border-radius: 20px}
+    
+    .register-card img {width: 50vh; height: 50vh}
     
 
     
@@ -989,10 +988,14 @@ transform: scaleX(0);
     </div>
 </footer>
 </div>
+    
 
     
 <!-- Modal -->
 <div class="modal fade" style="background: #151c55" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    
+        <div class="modal fade" style="background: #151c55" id="step1gif" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><img src="assets/paper_img/step1.gif" width="100%" height="100%"  data-dismiss="modal" target="#step1gif"></div>
+
 
 
     <div class="barr" style="width: 100%">
@@ -1029,10 +1032,9 @@ transform: scaleX(0);
                      
 <div class="register-card col-sm-6 step"><label>Step 1</label>
     <ul>
-    <li>Log on to eLearn</li> 
-    <li>Complete the <b>Reflective Practice Unit</b> by scoring at least 80% for the quiz.</li> 
-        
-    <li>Complete the <b>Community Service Units</b> by scoring at least 80% for each quiz.</li>
+    <li>Log on to eLearn</li>     <br>
+    <li>Search for <b>Co-Curricular Learning</b>, followed by the year of your admission - i.e. Co-Curricular Learning 2021, or click on the <b>Co-Curricular Learning</b> icon.</li> <br>
+    <li>Complete the <b>Reflective Practice Unit</b> by scoring at least 80% for the quiz.</li> <br>
              
              
      </ul> 
@@ -1044,7 +1046,8 @@ transform: scaleX(0);
  class="btn btn-fill btn-block input" id="input1" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
                 
-<div class="col-sm-6 register-card2"><img src="assets/paper_img/step1.gif" width="100%" height="100%"></div>
+<div class="col-sm-6 register-card2"><img src="assets/paper_img/step1.gif" width="100%" height="100%" data-toggle="modal" data-target="#step1gif"></div>
+
              </div>
     
     </div>
@@ -1055,14 +1058,18 @@ transform: scaleX(0);
          <div class="container">
 
 <div class="register-card col-sm-6" style="position: relative">
-        <ul style="background: #000; text-align: center; padding: 5px; position: absolute; right: 0; top: 0; color: #fff">Next update is at <span id="time"></span></ul>
+
     
     <label>Step 2</label>
     <ul style="position: relative">
-    <li>Source for a suitable Community Service Project(CSP), preferably one that allows you to fulfil all your hours; this will give you an opportunity to learn more about the case and beneficiaries you are serving.</li> 
-    <li>Do note that prior approval must be obtained via OnTrac II before starting on your CSP. Otherwise, the community service hours will not be recognised.</li>
-<li>Log on to OnTrac II to apply or propose a CSP, and wait for an approval from C4SR</li>
-<li><b>Note: you will only be able to access OnTrac II after your RPU &amp; CSU completion status has been updated. This is updated 6 times a day.</b></li><br>
+        <li>Log on to eLearn</li><br>
+        <li>Go into the <b>Co-Curricular Learning</b> module</li><br>
+        <li>Click on <b>Activate Anthology Portfolio</b></li><br>
+     <i>This will activate your account on Anthology Portfolio, which will consolidate your your co-curricular experiences in SMU.</i><br>
+        
+        
+        
+        <br>
 
 
     
@@ -1114,11 +1121,11 @@ transform: scaleX(0);
          <div class="container">
 
 <div class="register-card col-sm-6" style="position: relative">
-
+        <ul style="background: #000; text-align: center; padding: 5px; position: absolute; right: 0; top: 0; color: #fff">Next update is at <span id="time"></span></ul>
     
     <label>Step 4</label>
     <ul style="position: relative">
-    <li>STEP 4</li> 
+    <li>Source for a suitable Community Service Project(CSP), preferably one that allows you to fulfil all your hours; this will give you an opportunity to learn more about the case and beneficiaries you are serving.</li> 
     <li>Do note that prior approval must be obtained via OnTrac II before starting on your CSP. Otherwise, the community service hours will not be recognised.</li>
 <li>Log on to OnTrac II to apply or propose a CSP, and wait for an approval from C4SR</li>
         <li><b>Note:</b> You will only be able to access OnTrac II after your RPU &amp; CSU completion status has been updated. This is updated 6 times a day.</li><br>
@@ -1171,7 +1178,7 @@ transform: scaleX(0);
     </div>
 <!--    end modal -->
 
-    
+    </div>
     
 </body>
 
@@ -1188,7 +1195,12 @@ transform: scaleX(0);
 
 	<script src="assets/js/ct-paper.js"></script>
     
-    <script>document.getElementById('myModal')
+    
+    
+    <script>
+        
+
+        document.getElementById('myModal')
         .addEventListener('scroll', function(event) {
     console.log("Scrolling");
 });
