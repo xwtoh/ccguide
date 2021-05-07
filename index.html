@@ -23,7 +23,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>    
     
     <link href='http://fonts.googleapis.com/css?family=Oswald:300,600' rel='stylesheet' type='text/css'>
-    
 
 <style>
         h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
@@ -48,9 +47,6 @@ transform: scaleX(0);
 }
     
     .register-card a{border-radius: 20px}
-    
-    .register-card img {width: 50vh; height: 50vh}
-    
 
     
     .btn{border: 0;border-radius: 0;}
@@ -96,6 +92,26 @@ transform: scaleX(0);
         .notif p {font-size: 16px; padding: 15px 15px 0 15px;}
     
     }
+    
+    
+    
+.image-open{
+  animation: scaleUp 0.5s linear;
+position: fixed;
+    top: 0;
+}    
+
+.clickable-image:hover{
+  cursor: pointer;
+}
+
+@keyframes scaleUp{
+  from{
+transform:scale(0);
+  }to{
+transform:scale(1);
+  }
+}
     
     </style>
 
@@ -994,7 +1010,7 @@ transform: scaleX(0);
 <!-- Modal -->
 <div class="modal fade" style="background: #151c55" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     
-        <div class="modal fade" style="background: #151c55" id="step1gif" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><img src="assets/paper_img/step1.gif" width="100%" height="100%"  data-dismiss="modal" target="#step1gif"></div>
+
 
 
 
@@ -1046,7 +1062,7 @@ transform: scaleX(0);
  class="btn btn-fill btn-block input" id="input1" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
                 
-<div class="col-sm-6 register-card2"><img src="assets/paper_img/step1.gif" width="100%" height="100%" data-toggle="modal" data-target="#step1gif"></div>
+<div class="col-sm-6 register-card2 clickable-image"><img src="assets/paper_img/step1.gif" width="100%" height="100%"></div>
 
              </div>
     
@@ -1083,7 +1099,7 @@ transform: scaleX(0);
              </div>
              
              
-<div class="col-sm-6 register-card2"><img src="assets/paper_img/step2.gif" width="100%" height="100%"></div>
+<div class="col-sm-6 register-card2"><img src="assets/paper_img/step2.gif" width="100%" height="100%" class="clickable-image"></div>
              </div>
                 
 
@@ -1349,7 +1365,9 @@ case 18:
     $('#time').html('12am');
 }        
         
-
+        $('.clickable-image').click(function () {
+    $(this).toggleClass('image-open');
+});
     </script>
     
 </html>
