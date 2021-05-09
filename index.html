@@ -92,32 +92,7 @@ transform: scaleX(0);
         .notif{position: fixed; bottom: 0; left: calc(-100%); width: 50% ; z-index: 1000;}
         .notif p {font-size: 16px; padding: 15px 15px 0 15px;}
         
-.image-open{
-  animation: scaleUp 0.5s linear;
-position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: 99999;
-    margin: auto;
-    background: black;
-    border: 20px solid black;
-}    
 
-
-.clickable-image:hover{
-  cursor: pointer;
-}
-
-@keyframes scaleUp{
-  from{
-transform:scale(0);
-  }to{
-transform:scale(1);
-  }
-}
-    
-    }
     
     
     
@@ -1071,7 +1046,11 @@ transform:scale(1);
  class="btn btn-fill btn-block input" id="input1" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
                 
-<div class="col-sm-6 register-card2 clickable-image"><img src="assets/paper_img/step1.gif" width="100%" height="100%"></div>
+<div class="col-sm-6 register-card2 "><video width="100%" height="100%" controls>
+  <source src="assets/paper_img/step1.mp4" type="video/mp4" preload>
+</video>
+             
+             </div>
 
              </div>
     
@@ -1108,7 +1087,7 @@ transform:scale(1);
              </div>
              
              
-<div class="col-sm-6 register-card2"><img src="assets/paper_img/step2.gif" width="100%" height="100%" class="clickable-image"></div>
+<div class="col-sm-6 register-card2"><img src="assets/paper_img/step2.gif" width="100%" height="100%" class=""></div>
              </div>
                 
 
@@ -1117,27 +1096,25 @@ transform:scale(1);
         <div class="section" style="padding: 70px 0 0 0" id="step3">
          <div class="container">
 
-<div class="register-card col-sm-6" style="position: relative">
-
-    
-    <label>Step 3</label>
-    <ul style="position: relative">
-    <li>Source for a suitable Community Service Project(CSP), preferably one that allows you to fulfil all your hours; this will give you an opportunity to learn more about the case and beneficiaries you are serving.</li> 
-    <li>Do note that prior approval must be obtained via OnTrac II before starting on your CSP. Otherwise, the community service hours will not be recognised.</li>
-<li>Log on to OnTrac II to apply or propose a CSP, and wait for an approval from C4SR</li>
-        <li><b>Note:</b> You will only be able to access OnTrac II after your RPU &amp; CSU completion status has been updated. This is updated 6 times a day.</li><br>
-
-
-    
+                     
+<div class="register-card col-sm-6 step"><label>Step 1</label>
+    <ul>
+    <li>Log on to eLearn</li>     <br>
+    <li>Search for <b>Co-Curricular Learning</b>, followed by the year of your admission - i.e. Co-Curricular Learning 2021, or click on the <b>Co-Curricular Learning</b> icon.</li> <br>
+    <li>Complete the <b>Reflective Practice Unit</b> by scoring at least 80% for the quiz.</li> <br>
+             
+             
      </ul> 
     
-    <a href="https://c4sr-smusg-csm.symplicity.com/students/index.php" target="_blank"
- class="btn btn-fill btn-block" style="margin: 30px 0 10px 0">log in to OnTrac II</a>
+    <a href="https://elearn.smu.edu.sg/d2l/loginh/" target="_blank"
+ class="btn btn-fill btn-block" style="margin: 30px 0 10px 0;">log on to eLearn</a>
     
     <div target="_blank"
  class="btn btn-fill btn-block input" id="input3" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
                 
+<div class="col-sm-6 register-card2 "><img src="assets/paper_img/step3.gif" width="100%" height="100%"></div>
+
 
             </div>
          </div>        
@@ -1374,9 +1351,6 @@ case 18:
     $('#time').html('12am');
 }        
         
-        $('.clickable-image').click(function () {
-    $(this).toggleClass('image-open');
-});
     </script>
     
 </html>
