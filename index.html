@@ -1674,7 +1674,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
 
     <div class="barr" style="width: 100%">
  <div class="container tim-container barr">
-<h4 style="margin: 21px 0; color: #fff; width: auto; display: inline-block">Community Service</h4>
+<h4 style="margin: 21px 0; color: #fff; width: auto; display: inline-block">Internships</h4>
      <a data-dismiss="modal" target="#myModal2" href="#" class="btn btn-danger btn-fill barr-button large">back</a>
      <a data-dismiss="modal" target="#myModal2" href="#" class="btn btn-danger btn-fill barr-button small" style="padding: 7px 12px;">&lt;</a>
      
@@ -1765,7 +1765,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
  class="btn btn-fill btn-block" style="margin: 30px 0 10px 0;">log on to eLearn</a>
     
     <div target="_blank"
- class="btn btn-fill btn-block input" id="input1" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
+ class="btn btn-fill btn-block input" id="2input1" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
              </div>
     
@@ -1803,7 +1803,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
  class="btn btn-fill btn-block" style="margin: 30px 0 10px 0; border-radius: 20px;">log on to OnTrac II</a>
     
     <div target="_blank"
- class="btn btn-fill btn-block input" id="input2" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
+ class="btn btn-fill btn-block input" id="2input2" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
              
 
@@ -1833,7 +1833,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
  class="btn btn-fill btn-block" style="margin: 30px 0 10px 0;">log on to eLearn</a>
     
     <div target="_blank"
- class="btn btn-fill btn-block input" id="input3" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
+ class="btn btn-fill btn-block input" id="2input3" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
 
 
@@ -1853,7 +1853,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
              
              
 <div class="register-card col-sm-6" style="position: relative">
-        <ul style="background: #000; text-align: center; padding: 5px; position: absolute; right: 15px; top: 0; color: #fff">Next update is at <span id="time"></span></ul>
+        <ul style="background: #000; text-align: center; padding: 5px; position: absolute; right: 15px; top: 0; color: #fff">Next update is at <span id="time2"></span></ul>
     
     <label>Step 4</label>
     
@@ -1877,7 +1877,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
  class="btn btn-fill btn-block" style="margin: 30px 0 10px 0">log in to OnTrac II</a>
     
     <div target="_blank"
- class="btn btn-fill btn-block input" id="input4" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
+ class="btn btn-fill btn-block input" id="2input4" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
                 
 
@@ -2042,7 +2042,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br>
  class="btn btn-fill btn-block" style="margin: 30px 0 10px 0">log in to Anthology Portfolio</a>
     
     <div target="_blank"
- class="btn btn-fill btn-block input" id="input5" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
+ class="btn btn-fill btn-block input" id="2input5" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
                 
 
@@ -2101,7 +2101,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br>
  class="btn btn-fill btn-block" style="margin: 30px 0 10px 0">log in to Anthology Portfolio</a>
     
     <div target="_blank"
- class="btn btn-fill btn-block input" id="input6" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
+ class="btn btn-fill btn-block input" id="2input6" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
                 
 
@@ -2341,24 +2341,6 @@ element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
 });        
     
-        $("#2input1").click(function() {
-    const element = document.getElementById('2step2');
-    
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-   $('.notif').animate({'top' : '0'});       
-    $('.round-time-bar div').addClass('clicked');
-    $('.notif').delay(5000).animate({'top' : '-100%'});
-    
-    setTimeout(function(){
-             $('.round-time-bar div').removeClass('clicked');}, 5500 );   
-
-});        
-    
-        
-        
-        
-        
         $("#input2").click(function() {
     const element = document.getElementById('step3');
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -2377,25 +2359,80 @@ element.scrollIntoView({ behavior: 'smooth', block: 'start' });
               
         
         });     
-        
-        
-        
+              
         $("#input4").click(function() {
     const element = document.getElementById('step5');
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });      
-        
-                
+                      
         $("#input5").click(function() {
     const element = document.getElementById('step6');
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });      
-        
+        });          
                 
         $("#input6").click(function() {
     const element = document.getElementById('step7');
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });   
+        
+        
+        
+               
+$("#2input1").click(function() {
+    const element = document.getElementById('2step2');
+    
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+   $('.notif').animate({'top' : '0'});       
+    $('.round-time-bar div').addClass('clicked');
+    $('.notif').delay(5000).animate({'top' : '-100%'});
+    
+    setTimeout(function(){
+             $('.round-time-bar div').removeClass('clicked');}, 5500 );   
+
+});        
+    
+        $("#2input2").click(function() {
+    const element = document.getElementById('2step3');
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });       
+                
+        $("#2input3").click(function() {
+    const element = document.getElementById('2step4');
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+               
+   $('.notif2').animate({'top' : '0'});       
+    $('.round-time-bar div').addClass('clicked');
+    $('.notif2').delay(5000).animate({'top' : '-100%'});
+    
+    setTimeout(function(){
+             $('.round-time-bar div').removeClass('clicked');}, 5500 );   
+              
+        
+        });     
+              
+        $("#2input4").click(function() {
+    const element = document.getElementById('2step5');
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });      
+                      
+        $("#2input5").click(function() {
+    const element = document.getElementById('2step6');
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });          
+                
+        $("#2input6").click(function() {
+    const element = document.getElementById('2step7');
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });   
+        
+        
+        
+        
+        
+        
+        
+        
         
         
 $("#step1btn").click(function() {
@@ -2462,6 +2499,84 @@ element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
         
+                
+        
+        
+$("#2step1btn").click(function() {
+    const element = document.getElementById('2step1')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
+$("#2step2btn").click(function() {
+    const element = document.getElementById('2step2')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});     
+        
+$("#2step3btn").click(function() {
+    const element = document.getElementById('2step3')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
+        $("#2step4btn").click(function() {
+    const element = document.getElementById('2step4')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
+        $("#2step5btn").click(function() {
+    const element = document.getElementById('2step5')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
+        $("#2step6btn").click(function() {
+    const element = document.getElementById('2step6')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
+        
+                $("#2step7btn").click(function() {
+    const element = document.getElementById('2step7')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
+        
+        
+        
+        
+$("#2step1btns").click(function() {
+    const element = document.getElementById('2step1')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});    
+$("#2step2btns").click(function() {
+    const element = document.getElementById('2step2')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});    
+$("#2step3btns").click(function() {
+    const element = document.getElementById('2step3')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
+$("#2step4btns").click(function() {
+    const element = document.getElementById('2step4')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});    
+$("#2step5btns").click(function() {
+    const element = document.getElementById('2step5')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});    
+$("#2step6btns").click(function() {
+    const element = document.getElementById('2step6')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+        
+        $("#2step7btns").click(function() {
+    const element = document.getElementById('2step7')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         jQuery.fn.clickToggle = function(a, b) {
   return this.on("click", function(ev) { [b, a][this.$_io ^= 1].call(this, ev) })
@@ -2469,88 +2584,88 @@ element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         
 $('.stepbtn, .stepbtns').clickToggle(function(ev) {
 $('.pagelabel').animate({bottom: '+=252px'});
-$('#karat').toggleClass("toggle-up");
+$('#karat,#karat2').toggleClass("toggle-up");
 
 }, function(ev) {
 $('.pagelabel').animate({bottom: '-=252px'});
-$('#karat').toggleClass("toggle-up");
+$('#karat,#karat2').toggleClass("toggle-up");
 });
 
 
         
 switch (new Date().getHours()) {
   case 0:
-    $('#time').html('4am');
+    $('#time,#time2').html('4am');
     break;
   case 1:
-    $('#time').html('4am');
+    $('#time,#time2').html('4am');
     break;
   case 2:
-    $('#time').html('4am');
+    $('#time,#time2').html('4am');
     break;
   case 3:
-    $('#time').html('4am');
+    $('#time,#time2').html('4am');
     break;
   case 4:
-    $('#time').html('8am');
+    $('#time,#time2').html('8am');
     break;
   case 5:
-    $('#time').html('8am');
+    $('#time,#time2').html('8am');
     break;
 case 6:
-    $('#time').html('8am');
+    $('#time,#time2').html('8am');
     break;
   case 7:
-    $('#time').html('8am');
+    $('#time,#time2').html('8am');
     break;
   case 8:
-    $('#time').html('12pm');
+    $('#time,#time2').html('12pm');
     break;
   case 9:
-    $('#time').html('12pm');
+    $('#time,#time2').html('12pm');
     break;
   case 10:
-    $('#time').html('12pm');
+    $('#time,#time2').html('12pm');
     break;
   case 11:
-    $('#time').html('12pm');
+    $('#time,#time2').html('12pm');
     break;  
     
 case 12:
-    $('#time').html('4pm');
+    $('#time,#time2').html('4pm');
     break;
   case 13:
-    $('#time').html('4pm');  
+    $('#time,#time2').html('4pm');  
     break;
   case 14:
-    $('#time').html('4pm');
+    $('#time,#time2').html('4pm');
     break;
   case 15:
-    $('#time').html('4pm');
+    $('#time,#time2').html('4pm');
     break;
   case 16:
-    $('#time').html('8pm');
+    $('#time,#time2').html('8pm');
     break;
   case 17:
-    $('#time').html('8pm');
+    $('#time,#time2').html('8pm');
     break;
 case 18:
-    $('#time').html('8pm');
+    $('#time,#time2').html('8pm');
     break;
   case 19:
-    $('#time').html('8pm');
+    $('#time,#time2').html('8pm');
     break;
   case 20:
-    $('#time').html('12am');
+    $('#time,#time2').html('12am');
     break;
   case 21:
-    $('#time').html('12am');
+    $('#time,#time2').html('12am');
     break;
   case 22:
-    $('#time').html('12am');
+    $('#time,#time2').html('12am');
     break;
   case 23:
-    $('#time').html('12am');
+    $('#time,#time2').html('12am');
 }        
         
     </script>
