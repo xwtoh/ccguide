@@ -87,8 +87,7 @@
   background: #151c55;
  transform: scaleX(1);
     transform-origin: left;
-    z-index: 9999;
-}
+    }
     
 .round-time-bar div.clicked {
 transform: scaleX(0);
@@ -130,7 +129,7 @@ transition: transform 5000ms linear;
     
     .notif, .notif2, .notifx, .notif2x, .notifxx, .notif2xx{position: fixed; top: calc(-100%); width: 100% ; z-index: 1000; background: #8A704C;
     }    
-    
+
     .notif p, .notif2 p,.notifx p, .notif2x p,.notifxx p, .notif2xx p{font-size: 12px; color: #fff; padding: 15px 15px 0 15px;}
             .register-card p {font-size: 12px;}
 
@@ -1563,7 +1562,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
 
     <div class="barr" style="width: 100%">
  <div class="container tim-container barr">
-<h4 style="margin: 21px 0; color: #fff; width: auto; display: inline-block">Co-curricular Activities*</h4>
+     <h4 style="margin: 21px 0; color: #fff; width: auto; display: inline-block; cursor: pointer" id="button4">Co-curricular Activities *</h4>
      <a data-dismiss="modal" target="#myModal3" href="#" class="btn btn-danger btn-fill barr-button large">back</a>
      <a data-dismiss="modal" target="#myModal3" href="#" class="btn btn-danger btn-fill barr-button small" style="padding: 7px 12px;">&lt;</a>
      
@@ -1573,12 +1572,9 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
     </div>
     
 
-    <div class="alert alert-danger notifxx" style="padding: 0">
+    <div class="alert alert-danger notifxx" style="padding: 70px 0 0 0; z-index: 998">
    
-        <p>Note: This section of the guide <b>does not apply</b> to Student Leaders under the Office of Student Life(OSL). Please approach your respective OSL managers for more information and the steps required.</p>
-<div class="round-time-bar">
-  <div></div>
-</div>
+        <p style="padding: 15px;">Note: This section of the guide <b>does not apply</b> to Student Leaders under the Office of Student Life(OSL). Please approach your respective OSL managers for more information and the steps required.</p>
     </div>
           
     <div class="alert alert-danger notif2xx" style="padding: 0">
@@ -1631,7 +1627,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
 
 <div class="wrapper">
 
-        <div class="section" style="padding: 70px 0;" id="2step1">
+        <div class="section" style="padding: 140px 0;" id="3step1">
          <div class="container">
 
                 
@@ -1653,7 +1649,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
  class="btn btn-fill btn-block" style="margin: 30px 0 10px 0;">log on to eLearn</a>
     
     <div target="_blank"
- class="btn btn-fill btn-block input" id="2input1" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
+ class="btn btn-fill btn-block input" id="3input1" style="border-radius: 20px;margin: 10px 0;">I've done this</div>
              </div>
              </div>
     
@@ -2317,18 +2313,9 @@ element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         
         
         
-  $("#button3").click(function() {
-    const element = document.getElementById('2step2');
-    
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
+  $("#button3,#button4").click(function() {
    $('.notifxx').animate({'top' : '0'});       
-    $('.round-time-bar div').addClass('clicked');
     $('.notifxx').delay(5000).animate({'top' : '-100%'});
-    
-    setTimeout(function(){
-             $('.round-time-bar div').removeClass('clicked');}, 5500 );   
-
 });              
         
         
