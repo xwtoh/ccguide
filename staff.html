@@ -856,27 +856,18 @@ activity, a report can be generated to show aggregated student information.
   <div></div>
 </div>
     </div>
-      
-    <div class="pagelabel3"  style="margin-bottom: 15px ">
+    
+    
+        <div class="pagelabel3"  style="margin-bottom: 15px ">
     
        
-    <a class="btn btn-danger btn-fill large stepbtn3"><b class="caret karat3"></b>&nbsp;Steps</a>
+    <a class="btn btn-danger btn-fill large stepbtn3"><b class="caret karat"></b></a>
         
-    <a class="btn btn-danger btn-fill large" id="3step1btn">Step 1</a>
-    <a class="btn btn-danger btn-fill large" id="3step2btn">Step 2</a>
-        
-
-    
-     <a class="btn btn-danger btn-fill small stepbtns3" style="padding: 7px 14px; margin: 0;" id="#3stepbtns">?</a>
-
-         <a class="btn btn-danger btn-fill small" style="padding: 7px 14px; margin: 0;" id="3step1btns">1</a>
-
-         <a class="btn btn-danger btn-fill small" style="padding: 7px 14px; margin: 0;" id="3step2btns">2</a>
-
-   
+ <a class="btn btn-danger btn-fill small stepbtns3"><b class="caret karat"></b></a>
     
    </div>
     
+      
           
            <div class="wrapper">  
                    <div class="section" style="padding: 70px 0; min-height: auto; background: #fff; border: 5px solid #8A704C;" id="3intro">
@@ -1651,8 +1642,13 @@ element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
         
 $('.stepbtn, .stepbtns').clickToggle(function(ev) {
-    const element = document.getElementById('step0')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const element = document.getElementById('intro')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' })};
+
+
+$('.stepbtn3, .stepbtns3').clickToggle(function(ev) {
+    const element = document.getElementById('3intro')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' })};
 
 
         
