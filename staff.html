@@ -1637,21 +1637,16 @@ element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });    
 
 
+    $(".stepbtn, .stepbtns").click(function() {
+    const element = document.getElementById('intro')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
         
-        jQuery.fn.clickToggle = function(a, b) {
-  return this.on("click", function(ev) { [b, a][this.$_io ^= 1].call(this, ev) })
-};
+    $(".stepbtn3, .stepbtns3").click(function() {
+    const element = document.getElementById('3intro')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
         
-$('.stepbtn, .stepbtns').clickToggle(function(ev) {
-    const element = document.getElementById('intro');
-element.scrollIntoView({ behavior: 'smooth', block: 'start' })};
-
-
-$('.stepbtn3, .stepbtns3').clickToggle(function(ev) {
-    const element = document.getElementById('3intro');
-element.scrollIntoView({ behavior: 'smooth', block: 'start' })};
-
-
         
 switch (new Date().getHours()) {
   case 0:
