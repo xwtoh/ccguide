@@ -27,6 +27,21 @@
         h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: "Oswald", sans-serif;
 }
+    .glo{font-size: 80%; padding: 0 10px;}
+    
+    
+    .arrow-down {
+ width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-top: 20px solid #151c55;
+}
+
+    
+    .first1{margin-top: 63px;}
+    
     .login2{
         background: #81bc41;
     border-color: #81bc41;
@@ -102,6 +117,7 @@
     
         .flag2{
     background: url(assets/paper_img/layout-box-bg-trans.png);
+    background-color: #fff;
     border-radius: 5px;
     border: 1px solid #c2c1bc;
     display: inline;
@@ -201,6 +217,9 @@ transition: transform 5000ms linear;
     .useful{border-radius: 20px; float: right; display: inline-block;}
     
     @media (min-width: 768px) {
+        
+        
+          .first1{margin-top: 70px;}
           .barr {height: 70px;position: fixed; top: 0; left: 0; background: #151c55; z-index: 999;}
         .barr-button {margin:17px 0;float: right; content: "back"}
         .barr> a{border-radius: 20px;}
@@ -279,8 +298,8 @@ transition: transform 5000ms linear;
             </div>
 
                     <div class="tim-title">
-                        <h3>Choose one <br />
-                            <small>Pick the appropriate guide for the activity that you are embarking on </small>
+                        <h3>
+                            <small>Pick the appropriate guide for the activity</small>
                         </h3>
                     </div>
                     <div class="row">
@@ -302,7 +321,7 @@ transition: transform 5000ms linear;
                         <div class="col-sm-6 col-md-6" style="padding: 0">
                             <div class="coll" id="button3" data-toggle="modal" data-target="#myModal3" style="background: #151c55">
                             <div class="tabb btn" style="margin-bottom: 0; padding: 0; position: absolute; bottom: 0;z-index: 2;">
-                            <h4>CCAs</h4>
+                            <h4>CCAs<br>Competitions<br>Workshops</h4>
 
                         </div>
                             </div>
@@ -392,9 +411,13 @@ transition: transform 5000ms linear;
     
    </div>
     
+    <div id="intro"></div>
           
-    <div class="wrapper">  
-                   <div class="section" style="padding: 70px 0; min-height: auto; background: #fff; border: 5px solid #8A704C;" id="intro">
+    <div class="wrapper first1">  
+                   
+        
+        
+        <div class="section" style="padding: 70px 0; min-height: auto; background: #fff; border: 5px solid #8A704C;">
                        <div class="container">
 
 
@@ -403,72 +426,236 @@ transition: transform 5000ms linear;
         <label>Introduction to Anthology Portfolio</label>
 
     <p>Each student's co-curricular activity is indexed as a singular <b>Placement</b> within Anthology Portfolio.
-        <br><br>
-  At the end of their undergraduate years, the student will have an aggregated assessment of all their co-curricular activities, reflection in accordance to the <b>SMU Graduate Learning Outcomes (GLOs)</b>.
-    <br><br>
-
+        <br>
     
     </p><br>
 
     
 <div class="col-sm-12" style="position: relative; height: 30vh">
     
-        <p class="col-sm-8 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff;position: absolute; top: 0; left: 0; z-index: 3;
+        <p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff;position: absolute; top: 0; left: 0; z-index: 3;
 ">
-        <b>Placement</b> (CSP/Internship)<br><br>
+        <b>Placement</b> (CSP/Internship)<br>
     
     
-    
+    <label style="background: #151c55; width: 100%">
      Pre-Activity Learning Objective (LO) Selection&nbsp;<span class="flag2">Survey</span><br>
         
  Mid Activity check-in&nbsp;<span class="flag2">Survey</span><br>
         
-Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
-    Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span><br><br>  <br> 
-    Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>            
+        Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br></label>
+            
+<label style="background: #151c55; width: 100%">Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span></label>
+    
+    
+    <br>
+            <label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span></label><br>            
             
 </p>
     
         
-        <p class="col-sm-8 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 10px; left: 10px; z-index: 2;
+        <p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 10px; left: 10px; z-index: 2;
 ">
-        <b>Placement</b> (CSP/Internship)<br><br>
+           <b>Placement</b> (CSP/Internship)<br>
     
     
-    
+    <label style="background: #151c55; width: 100%">
      Pre-Activity Learning Objective (LO) Selection&nbsp;<span class="flag2">Survey</span><br>
         
-    Mid Activity check-in&nbsp;<span class="flag2">Survey</span><br>
+ Mid Activity check-in&nbsp;<span class="flag2">Survey</span><br>
         
-Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
-
-    Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span><br><br>  <br> 
-    Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>            
+        Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br></label>
+            
+<label style="background: #151c55; width: 100%">Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span></label>
+    
+    
+    <br>
+            <label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span></label><br>    
         
 </p>
     
         
         
-        <p class="col-sm-8 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 20px; left: 20px; z-index: 1;">
+<p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 20px; left: 20px; z-index: 1;">
 
-        <b>Placement</b> (CSP/Internship)<br><br>
+      <b>Placement</b> (CSP/Internship)<br>
     
+    
+    <label style="background: #151c55; width: 100%">
      Pre-Activity Learning Objective (LO) Selection&nbsp;<span class="flag2">Survey</span><br>
         
-    Mid Activity check-in&nbsp;<span class="flag2">Survey</span><br>
+ Mid Activity check-in&nbsp;<span class="flag2">Survey</span><br>
         
-Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
-    Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span><br><br>  <br> 
-    Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>            
+        Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br></label>
+            
+<label style="background: #151c55; width: 100%">Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span></label>
+    
+    
+    <br>
+            <label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span></label><br>    
 </p>
     
     
     </div>
 
     
-<br>
 
+    <p>Students will make reference to the <b>SMU Graduate Learning Outcomes (GLOs)</b> when doing their reflection, and are assessed on these in your Departmental Rubric* and the Transformative Learning Rubric. 
+      <br><br>  
+    *The Departmental Rubric is designed to be optional for staff, as an additional data point and affirmation of the student's achievement in the activity, which can be observed in person, or through the student's reflection.
+    <br><br>
+
+    
+    </p>
+    
+    
+    
+<div class="col-sm-12" style="position: relative; height: 40vh">
+    
+        <p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff;position: absolute; top: 0; left: 0; z-index: 3;
+">
+        <b>Placement</b> (CSP/Internship)<br>
+  
+    <label style="background: #151c55; width: 100%">   Pre-Activity Learning Objective (LO) Selection&nbsp;<span class="flag2">Survey</span><br>
+        
+ Mid Activity check-in&nbsp;<span class="flag2">Survey</span><br>
+        
+        Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            
+            </label>
+            
+<label style="background: #151c55; width: 100%">Department Rubric (if applicable)&nbsp;<span class="flag2">Assessment</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br>                 
+<label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>
+            
+
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br>       
+            
+</p>
+    
+        
+        <p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 10px; left: 10px; z-index: 2;
+">        <b>Placement</b> (CSP/Internship)<br>
+  
+    <label style="background: #151c55; width: 100%">   Pre-Activity Learning Objective (LO) Selection&nbsp;<span class="flag2">Survey</span><br>
+        
+ Mid Activity check-in&nbsp;<span class="flag2">Survey</span><br>
+        
+        Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            
+            </label>
+            
+<label style="background: #151c55; width: 100%">Department Rubric (if applicable)&nbsp;<span class="flag2">Assessment</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br>                 
+<label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br> 
+</p>
+    
+        
+        
+        <p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 20px; left: 20px; z-index: 1;">
+       <b>Placement</b> (CSP/Internship)<br>
+            
+    <label style="background: #151c55; width: 100%">   Pre-Activity Learning Objective (LO) Selection&nbsp;<span class="flag2">Survey</span><br>
+        
+ Mid Activity check-in&nbsp;<span class="flag2">Survey</span><br>
+        
+        Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            
+            </label>
+            
+<label style="background: #151c55; width: 100%">Department Rubric (if applicable)&nbsp;<span class="flag2">Assessment</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br>                 
+<label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br> 
+</p>
+    
+    
+    </div>
+
+
+    
+    
+<div class="col-sm-12" style="position: relative; text-align: center">
+    
+    <div class="arrow-down" style="display: inline-block"></div>
+    
+    </div>
+    
+<div class="col-sm-12" style="position: relative; text-align: center">
+    <label style="background: #151c55; width: 100%">Final Co-curricular record<br>
+    
+        <label>GLO 2</label> <label style="background: #090c26;">Achievement level</label>  <br> 
+        
+        <label>GLO 3</label> <label style="background: #090c26;">Achievement level</label>  <br> 
+        
+        <label>GLO 4</label> <label style="background: #090c26;">Achievement level</label>  <br> 
+        
+        <label>GLO 5</label> <label style="background: #090c26;">Achievement level</label>  <br>  
+
+    </label> 
+    
              </div>
+    
+
+    
+    <p><br><br><br><br>
+    <p>
+  At the end of their undergraduate years, students will have an aggregated assessment of all their co-curricular activities, reflected as achievement levels in accordance to the <b>SMU Graduate Learning Outcomes</b>.
+    <br><br>
+
+    
+    </p><br>
              
             </div>
     
@@ -498,7 +685,7 @@ Post-Activity reflection&nbsp;<span class="flag2">Survey</span><br><br>
             <br>        <br>
     <label style="width: 100%" class="btn btn-danger btn-fill" id="step3btn">Assessing a student</label>
                <br>        <br>
-        <label style="width: 100%" class="btn btn-danger btn-fill" id="step4btn">Generating a report</label>
+    <label style="width: 100%" class="btn btn-danger btn-fill" id="step4btn">Generating a report</label>
    
              </div>
                      
@@ -814,17 +1001,11 @@ activity, a report can be generated to show aggregated student information.
     </div>
 <!--    end modal -->
 
-    </div>
+    </div></div>
    <!-- Modal 1 end --> 
     
-    
-   <!-- Modal 2 end --> 
-    
-    
-    
-    
-    
-    
+
+
        <!-- Modal 3 -->
 <div class="modal fade" style="background: #151c55" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     
@@ -846,7 +1027,7 @@ activity, a report can be generated to show aggregated student information.
 
     <div class="alert alert-danger notifxx" style="padding: 70px 0 0 0; z-index: 998">
    
-        <p style="padding: 15px;"><b>*&nbsp;Note:</b> This section of the guide <b>does not apply</b> to Student Leaders under the Office of Student Life (OSL). Please approach your respective OSL managers for more information and the steps required.</p>
+        <p style="padding: 15px;"><b>*&nbsp;Note:</b> This section of the guide <b>does not apply</b> to students/managers under the Office of Student Life (OSL). Please approach OSL for more information and the steps required.</p>
     </div>
           
     <div class="alert alert-danger notif2xx" style="padding: 0">
@@ -868,9 +1049,10 @@ activity, a report can be generated to show aggregated student information.
    </div>
     
       
+    <div id="3intro"></div>
           
-           <div class="wrapper">  
-                   <div class="section" style="padding: 70px 0; min-height: auto; background: #fff; border: 5px solid #8A704C;" id="3intro">
+                
+        <div class="section" style="padding: 70px 0; min-height: auto; background: #fff; border: 5px solid #8A704C;">
                        <div class="container">
 
 
@@ -879,61 +1061,215 @@ activity, a report can be generated to show aggregated student information.
         <label>Introduction to Anthology Portfolio</label>
 
     <p>Each student's co-curricular activity is indexed as a singular <b>Placement</b> within Anthology Portfolio.
-        <br><br>
-  At the end of their undergraduate years, the student will have an aggregated assessment of all their co-curricular activities, reflection in accordance to the <b>SMU Graduate Learning Outcomes (GLOs)</b>.
-    <br><br>
-
+        <br>
     
     </p><br>
 
     
 <div class="col-sm-12" style="position: relative; height: 30vh">
     
-        <p class="col-sm-8 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff;position: absolute; top: 0; left: 0; z-index: 3;
+        <p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff;position: absolute; top: 0; left: 0; z-index: 3;
 ">
-        <b>Placement</b> (CSP/Internship)<br><br>
+        <b>Placement</b> (CCA)<br>
     
     
-    
-    Reflection Journal&nbsp;<span class="flag2">Journal</span><br><br><br>
+    <label style="background: #151c55; width: 100%">
+Reflection Journal&nbsp;<span class="flag2">Journal</span><br></label>
             
-    Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span><br><br>  <br> 
-    Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>            
+<label style="background: #151c55; width: 100%">Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span></label>
+    
+    
+    <br>
+            <label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span></label><br>            
             
 </p>
     
         
-        <p class="col-sm-8 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 10px; left: 10px; z-index: 2;
+        <p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 10px; left: 10px; z-index: 2;
 ">
-        <b>Placement</b> (CSP/Internship)<br><br>
+           <b>Placement</b> (CCA)<br>
     
-   
-    Reflection Journal&nbsp;<span class="flag2">Journal</span><br><br><br>
+    
+    
+    <label style="background: #151c55; width: 100%">
+Reflection Journal&nbsp;<span class="flag2">Journal</span><br></label>
             
-    Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span><br><br>  <br> 
-    Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>              
+<label style="background: #151c55; width: 100%">Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span></label>
+    
+    
+    <br>
+            <label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span></label><br>    
         
 </p>
     
         
         
-        <p class="col-sm-8 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 20px; left: 20px; z-index: 1;">
+<p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 20px; left: 20px; z-index: 1;">
 
-        <b>Placement</b> (CSP/Internship)<br><br>
+      <b>Placement</b> (CCA)<br>
+    
      
-    Reflection Journal&nbsp;<span class="flag2">Journal</span><br><br><br>
+    <label style="background: #151c55; width: 100%">
+Reflection Journal&nbsp;<span class="flag2">Journal</span><br></label>
             
-    Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span><br><br>  <br> 
-    Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>      
+<label style="background: #151c55; width: 100%">Department Rubric&nbsp;(if applicable)&nbsp;<span class="flag2">Assessment</span></label>
+    
+    
+    <br>
+            <label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span></label><br>    
 </p>
     
     
     </div>
 
     
-<br>
 
+    <p>Students will make reference to the <b>SMU Graduate Learning Outcomes (GLOs)</b> when doing their reflection, and are assessed on these in your Departmental Rubric* and the Transformative Learning Rubric. 
+      <br><br>  
+    *The Departmental Rubric is designed to be optional for staff, as an additional data point and affirmation of the student's achievement in the activity, which can be observed in person, or through the student's reflection. 
+        <br><br>
+    Additionally, for short activities such as <b>workshops</b>, there will be no Departmental Rubric, and students will be automatically graded as "Exposure" (akin to a "Participation" grade) on the Transformative Learning Rubric.
+    <br><br>
+
+    
+    </p>
+    
+    
+    
+<div class="col-sm-12" style="position: relative; height: 35vh">
+    
+        <p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff;position: absolute; top: 0; left: 0; z-index: 3;
+">
+        <b>Placement</b> (CCA)<br>
+  
+    <label style="background: #151c55; width: 100%">Reflection Journal&nbsp;<span class="flag2">Journal</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            
+            </label>
+            
+<label style="background: #151c55; width: 100%">Department Rubric (if applicable)&nbsp;<span class="flag2">Assessment</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br>                 
+<label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>
+            
+
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br>       
+            
+</p>
+    
+        
+        <p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 10px; left: 10px; z-index: 2;
+">        <b>Placement</b> (CCA)<br>
+  
+    <label style="background: #151c55; width: 100%">  Reflection Journal&nbsp;<span class="flag2">Journal</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            
+            </label>
+            
+<label style="background: #151c55; width: 100%">Department Rubric (if applicable)&nbsp;<span class="flag2">Assessment</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br>                 
+<label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br> 
+</p>
+    
+        
+        
+        <p class="col-sm-11 card1" style="border: 2px solid black; margin: 0; padding: 10px; background: #fff; position: absolute; top: 20px; left: 20px; z-index: 1;">
+       <b>Placement</b> (CCA)<br>
+            
+    <label style="background: #151c55; width: 100%">Reflection Journal&nbsp;<span class="flag2">Journal</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            
+            </label>
+            
+<label style="background: #151c55; width: 100%">Department Rubric (if applicable)&nbsp;<span class="flag2">Assessment</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br>                 
+<label style="background: #151c55; width: 100%">Transformative Learning Rubric&nbsp;<span class="flag2">Assessment</span><br>
+            
+    <label class="glo" style="margin: 5px 5px 0 0;">GLO 2</label>
+    <label class="glo" style="margin: 0 5px;">GLO 3</label>
+    <label class="glo" style="margin: 0 5px;">GLO 4</label>
+    <label class="glo" style="margin: 0 5px;">GLO 5</label>
+            </label>
+    <br> 
+</p>
+    
+    
+    </div>
+
+
+    
+    
+<div class="col-sm-12" style="position: relative; text-align: center">
+    
+    <div class="arrow-down" style="display: inline-block"></div>
+    
+    </div>
+    
+<div class="col-sm-12" style="position: relative; text-align: center">
+    <label style="background: #151c55; width: 100%">Final Co-curricular record<br>
+    
+        <label>GLO 2</label> <label style="background: #090c26;">Achievement level</label>  <br> 
+        
+        <label>GLO 3</label> <label style="background: #090c26;">Achievement level</label>  <br> 
+        
+        <label>GLO 4</label> <label style="background: #090c26;">Achievement level</label>  <br> 
+        
+        <label>GLO 5</label> <label style="background: #090c26;">Achievement level</label>  <br>  
+
+    </label> 
+    
              </div>
+    
+
+    
+    <p><br><br><br><br>
+    <p>
+  At the end of their undergraduate years, students will have an aggregated assessment of all their co-curricular activities, reflected as achievement levels in accordance to the <b>SMU GLOs</b>.
+    <br><br>
+It is therefore necessary - when administering and planning for CCAs - to think about and address the <b>SMU GLOs</b>, which will be included in the reflection and assessment of students as they participate in the CCAs.
+    
+    </p><br>
              
             </div>
     
@@ -941,8 +1277,8 @@ activity, a report can be generated to show aggregated student information.
     
     </div>
     
-    </div> 
-        
+    </div>
+
 
 <div class="wrapper">
 
@@ -956,7 +1292,7 @@ activity, a report can be generated to show aggregated student information.
     
     <label style="width: 100%" class="btn btn-danger btn-fill" id="3step1btn">How to login to Anthology Portfolio</label>
         <br>        <br>
-    <label style="width: 100%" class="btn btn-danger btn-fill" id="3step3btn">How to create a CCA/Student entry</label>
+    <label style="width: 100%" class="btn btn-danger btn-fill" id="3step2btn">How to create a CCA/Student entry</label>
        <br>        <br>
         <label style="width: 100%" class="btn btn-danger btn-fill" id="3step3btn">Searching for a student entry</label>
    
@@ -1053,7 +1389,11 @@ activity, a report can be generated to show aggregated student information.
         
         <li><b>After the activity</b>, fill in the <b>excel template</b> with the details relevant to the activity, and the list of students in the activity.
         
-        </li>    <br>
+         <br> <br>    
+            <b><i>Note: Remember to indicate the SMU GLOs relevant to the activity. Students and staff will take reference and reflect or assess based on these GLOs.<br><br></i></b>
+        </li>    
+        
+
         
         <li>Send the completed template to CCD.<br><br>
             <b><i>Note: CCD will take up to 1 week to create the Placements in Anthology, and you will be notified when the entries have been created.<br><br></i></b>
@@ -1497,123 +1837,9 @@ element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     const element = document.getElementById('step4')
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });        
-        $("#step5btn").click(function() {
-    const element = document.getElementById('step5')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
-        $("#step6btn").click(function() {
-    const element = document.getElementById('step6')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
+       
         
-                $("#step7btn").click(function() {
-    const element = document.getElementById('step7')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
-        
-        
-        
-        
-$("#step1btns").click(function() {
-    const element = document.getElementById('step1')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});    
-$("#step2btns").click(function() {
-    const element = document.getElementById('step2')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});    
-$("#step3btns").click(function() {
-    const element = document.getElementById('step3')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
-$("#step4btns").click(function() {
-    const element = document.getElementById('step4')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});    
-$("#step5btns").click(function() {
-    const element = document.getElementById('step5')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});    
-$("#step6btns").click(function() {
-    const element = document.getElementById('step6')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-        
-        $("#step7btns").click(function() {
-    const element = document.getElementById('step7')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-        
-                
-        
-        
-$("#2step1btn").click(function() {
-    const element = document.getElementById('2step1')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
-$("#2step2btn").click(function() {
-    const element = document.getElementById('2step2')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});     
-        
-$("#2step3btn").click(function() {
-    const element = document.getElementById('2step3')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
-        $("#2step4btn").click(function() {
-    const element = document.getElementById('2step4')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
-        $("#2step5btn").click(function() {
-    const element = document.getElementById('2step5')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
-        $("#2step6btn").click(function() {
-    const element = document.getElementById('2step6')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
-        
-                $("#2step7btn").click(function() {
-    const element = document.getElementById('2step7')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
-        
-        
-        
-        
-$("#2step1btns").click(function() {
-    const element = document.getElementById('2step1')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});    
-$("#2step2btns").click(function() {
-    const element = document.getElementById('2step2')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});    
-$("#2step3btns").click(function() {
-    const element = document.getElementById('2step3')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
-$("#2step4btns").click(function() {
-    const element = document.getElementById('2step4')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});    
-$("#2step5btns").click(function() {
-    const element = document.getElementById('2step5')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});    
-$("#2step6btns").click(function() {
-    const element = document.getElementById('2step6')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-        
-        $("#2step7btns").click(function() {
-    const element = document.getElementById('2step7')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-        
-        
-        
-        
+     
               
         
 $("#3step1btn").click(function() {
@@ -1625,27 +1851,17 @@ $("#3step2btn").click(function() {
 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });     
     
+ $("#3step3btn").click(function() {
+    const element = document.getElementById('3step3')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});        
+$("#3step4btn").click(function() {
+    const element = document.getElementById('3step4')
+element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});     
+    
  
-        
-$("#3step1btns").click(function() {
-    const element = document.getElementById('3step1')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});    
-$("#3step2btns").click(function() {
-    const element = document.getElementById('3step2')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});    
-
-
-    $(".stepbtn, .stepbtns").click(function() {
-    const element = document.getElementById('intro')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
-        
-    $(".stepbtn3, .stepbtns3").click(function() {
-    const element = document.getElementById('3intro')
-element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});        
+      
         
         
 switch (new Date().getHours()) {
